@@ -6,14 +6,15 @@ const autoprefixer = require('autoprefixer');
 const resolve = dir => path.join(__dirname, '.', dir)
 const pathSrc = resolve('../src/')
 const tsConfig = resolve('../tsconfig.json')
+console.log(resolve('../index.js'))
 module.exports = {
-	entry:[resolve('./polyfills'),resolve('../index.js')],
+	entry:[require.resolve('./polyfills.js'),resolve('../index.js')],
 	output:{
 		path:path.resolve(__dirname,'../dist'),
 		filename:'[name].js',
 		publicPath:'/',
 		libraryTarget:'umd',
-		udNameDefine:true,
+		umdNamedDefine:true,
 		library:'SkeletonPlugin'
 	},
 	module: {
@@ -44,7 +45,7 @@ module.exports = {
 					},
 					{
                         test: /\.(ts|tsx)$/,
-                        include: paths.appSrc,
+                        include: pathSrc,
                         use: [
                             {
                                 loader: require.resolve('ts-loader'),
