@@ -1,0 +1,88 @@
+@import "@util/common.scss";
+$skeleton-color: #f2f2f2;
+$skeleton-to-color:#e6e6e6;
+$skeleton-prefix-cls:homework-skeleton;
+$skeleton-avatar-prefix-cls:#{$skeleton-prefix-cls}-avatar;
+$skeleton-title-prefix-cls:#{$skeleton-prefix-cls}-title;
+$skeleton-paragraph-prefix-cls:#{$skeleton-prefix-cls}-paragraph;
+$avatar-size-base :r(32);
+$avatar-size-lg :r(40);
+$avatar-size-sm :r(24);
+@mixin avatar-size($size) {
+    width: $size;
+    height: $size;
+    line-height: $size;
+}
+@mixin skeleton-color {
+    background: linear-gradient(90deg,$skeleton-color 25%, $skeleton-to-color 37%, $skeleton-color 63%);
+    background-size: 400% 100%;
+    animation: #{$skeleton-avatar-prefix-cls}-loading 1.4s ease infinite;
+}
+@keyframes #{$skeleton-avatar-prefix-cls}-loading {
+    0%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.#{$skeleton-prefix-cls}{
+    display: flex;
+    width: 100%;
+    // padding: 0 r(16);
+    &-header{
+        // padding-right: r(16);
+        
+    }
+    .#{$skeleton-avatar-prefix-cls}{
+        // padding-right:r(16); 
+        background: $skeleton-color;
+        display: inline-block;
+        @include avatar-size( $avatar-size-base);
+        &-circle{
+            border-radius: 50%;
+        }
+        &-lg{
+            @include avatar-size( $avatar-size-lg);
+        }
+        &-sm{
+            @include avatar-size( $avatar-size-sm);
+        }
+    }
+    &-content{
+        flex:1;
+        // padding-left:r(16); 
+        .#{$skeleton-title-prefix-cls}{
+            width: 100%;
+            height: r(16);
+            margin-top: r(16);
+            background-color: $skeleton-color;
+        }
+        .#{$skeleton-paragraph-prefix-cls}{
+            padding: 0;
+            >li{
+                width: 100%;
+                height: r(16);
+                list-style: none;
+                background-color: $skeleton-color;
+                &:last-child:not(:first-child):not(:nth-child(2)) {
+                    width: 61%;
+                  }
+          
+                  + li {
+                    margin-top: 16px;
+                  }
+            }
+        }
+    }
+    &.#{$skeleton-prefix-cls}-active{
+        & .#{$skeleton-prefix-cls}-content{
+            .#{$skeleton-title-prefix-cls},.#{$skeleton-paragraph-prefix-cls} > li {
+                @include skeleton-color;
+            }
+        }
+        .#{$skeleton-avatar-prefix-cls}{
+            @include skeleton-color;
+        }
+    }
+}
