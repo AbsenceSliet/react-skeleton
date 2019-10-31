@@ -7,7 +7,7 @@ module.exports =  merge(baseConfig,{
 	mode:"production",
 	devtool:'#source-map',
 	resolve:{
-		extensions:['js','tsx','ts','.json'],
+		extensions:['.js','.tsx','.ts','.json'],
 		alias:{
 			'skeleton':''
 		},

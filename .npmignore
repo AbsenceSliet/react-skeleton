@@ -1,0 +1,13 @@
+.*
+*.md
+*.yml
+src/
+node_modules/
+config/
+build/
+.babelrc
+.gitignore
+tsconfig.json
+yarn-error.log
+package-lock.json
+npm-debug.log

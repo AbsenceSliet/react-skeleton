@@ -3,3 +3,4 @@ node_modules/
 package-lock.js
 yar-lock.js
 .DS_Store
+dist/
