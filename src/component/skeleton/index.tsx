@@ -14,7 +14,7 @@ interface SkeletonProps {
     title?: SkeletonTitleProps | boolean,
     avatar?: SkeletonAvatarProps | boolean
 }
-const ConfigConsumer = React.createContext().Consumer
+const ConfigConsumer = React.createContext(null).Consumer
 function getComponentProps<T>(prop: T | boolean | undefined): T | {} {
     if (prop && typeof prop === 'object') {
         return prop

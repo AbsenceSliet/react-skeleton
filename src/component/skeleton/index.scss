@@ -1,13 +1,12 @@
-@import "@util/common.scss";
 $skeleton-color: #f2f2f2;
 $skeleton-to-color:#e6e6e6;
-$skeleton-prefix-cls:homework-skeleton;
+$skeleton-prefix-cls:skeleton;
 $skeleton-avatar-prefix-cls:#{$skeleton-prefix-cls}-avatar;
 $skeleton-title-prefix-cls:#{$skeleton-prefix-cls}-title;
 $skeleton-paragraph-prefix-cls:#{$skeleton-prefix-cls}-paragraph;
-$avatar-size-base :r(32);
-$avatar-size-lg :r(40);
-$avatar-size-sm :r(24);
+$avatar-size-base :32px;
+$avatar-size-lg :40px;
+$avatar-size-sm :24px;
 @mixin avatar-size($size) {
     width: $size;
     height: $size;
@@ -29,13 +28,10 @@ $avatar-size-sm :r(24);
 .#{$skeleton-prefix-cls}{
     display: flex;
     width: 100%;
-    // padding: 0 r(16);
     &-header{
-        // padding-right: r(16);
         
     }
     .#{$skeleton-avatar-prefix-cls}{
-        // padding-right:r(16); 
         background: $skeleton-color;
         display: inline-block;
         @include avatar-size( $avatar-size-base);
@@ -51,18 +47,17 @@ $avatar-size-sm :r(24);
     }
     &-content{
         flex:1;
-        // padding-left:r(16); 
         .#{$skeleton-title-prefix-cls}{
             width: 100%;
-            height: r(16);
-            margin-top: r(16);
+            height:20;
+            margin-top: 20;
             background-color: $skeleton-color;
         }
         .#{$skeleton-paragraph-prefix-cls}{
             padding: 0;
             >li{
                 width: 100%;
-                height: r(16);
+                height: 20;
                 list-style: none;
                 background-color: $skeleton-color;
                 &:last-child:not(:first-child):not(:nth-child(2)) {
