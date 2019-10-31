@@ -11,7 +11,12 @@
     "skeleton",
     "react"
   ],
-  "author": "Garen",
+  "author": {
+    "name": "Garen",
+    "email": "zhang13213963055@gamil.com",
+    "url": "https:garen.com"
+  },
+  "homepage": "",
   "license": "ISC",
   "dependencies": {
     "webpack-merge": "^4.2.2"
