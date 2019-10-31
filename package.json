@@ -16,8 +16,16 @@
     "email": "zhang13213963055@gamil.com",
     "url": "https:garen.com"
   },
-  "homepage": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbsenceSliet/react-skeleton/issues"
+  },
+  "unpkg":"dist/skeleton.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbsenceSliet/react-skeleton.git"
+  },
+  "homepage": "https://github.com/AbsenceSliet/react-skeleton/blob/master/README.md",
+  "license": "MIT",
   "dependencies": {
     "webpack-merge": "^4.2.2"
   },
@@ -61,5 +69,9 @@
     "Firefox ESR",
     "> 1%",
     "ie >= 9"
-  ]
+  ],
+  "engines": {
+    "node":">= 4.0.0",
+    "npm": ">=3.0.0"
+  }
 }
