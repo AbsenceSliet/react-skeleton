@@ -103,12 +103,18 @@ module.exports = {
 		]
 	},
     plugins:[
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
             filename: devMode ? '[name].css' : '[name].[hash].css',
             chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
         }),
+        new CleanWebpackPlugin({
+            dry:false,
+            cleanStaleWebpackAssets:true,
+            cleanOnceBeforeBuildPatterns:[
+                path.resolve(__dirname,"../dist")
+            ]
+        })
     ]
 }

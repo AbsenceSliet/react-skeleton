@@ -49,7 +49,7 @@ function getParagraphBasicProps(hasAvatar: boolean, hasTitle: boolean): Skeleton
     }
     return basicProps
 }
-export default class Skeleton extends React.Component<SkeletonProps, any>{
+ class Skeleton extends React.Component<SkeletonProps>{
     static defaultProps: Partial<SkeletonProps> = {
         avatar: false,
         title: true,
@@ -130,3 +130,4 @@ export default class Skeleton extends React.Component<SkeletonProps, any>{
         )
     }
 }
+export default Skeleton

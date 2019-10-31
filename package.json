@@ -1,8 +1,9 @@
 {
-  "name": "skeleton-plugin",
-  "version": "1.0.0",
+  "name": "react-awesome-skeleton",
+  "version": "0.0.15",
   "description": " better loading effect",
   "main": "dist/skeleton.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config config/build.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/AbsenceSliet/react-skeleton/issues"
   },
-  "unpkg":"dist/skeleton.js",
+  "unpkg": "dist/skeleton.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/AbsenceSliet/react-skeleton.git"
@@ -27,7 +28,7 @@
   "homepage": "https://github.com/AbsenceSliet/react-skeleton/blob/master/README.md",
   "license": "MIT",
   "dependencies": {
-    "webpack-merge": "^4.2.2"
+    "react-awesome-skeleton": "^0.0.15"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -62,6 +63,7 @@
     "url-loader": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
+    "webpack-merge": "^4.2.2",
     "whatwg-fetch": "^3.0.0"
   },
   "browserslist": [
@@ -71,7 +73,7 @@
     "ie >= 9"
   ],
   "engines": {
-    "node":">= 4.0.0",
+    "node": ">= 4.0.0",
     "npm": ">=3.0.0"
   }
 }
