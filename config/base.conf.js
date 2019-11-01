@@ -10,9 +10,9 @@ const tsConfig = resolve('../tsconfig.json')
 const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
     // entry:[polyfills,{'skeleton':resolve('../index')}],
-    entry:{'skeleton':resolve('../index')},
+    entry:{'':resolve('../index')},
 	output:{
-		path:path.resolve(__dirname,'../dist'),
+		path:path.resolve(__dirname,'../','dist'),
 		filename:'[name].js',
 		publicPath:'/',
 		libraryTarget:'umd',
@@ -50,14 +50,7 @@ module.exports = {
                     path.resolve(__dirname,"node_modules")
                 ],
                 use: [
-                    {
-                        loader: require.resolve('ts-loader'),
-                        // options: {
-                        //     // disable type checker - we will use it in fork plugin
-                        //     transpileOnly: true,
-                        //     configFile: tsConfig,
-                        // },
-                    },
+                    'ts-loader'
                 ],
             },
 			{
@@ -113,7 +106,7 @@ module.exports = {
             dry:false,
             cleanStaleWebpackAssets:true,
             cleanOnceBeforeBuildPatterns:[
-                path.resolve(__dirname,"../dist")
+                path.resolve(__dirname,'../','dist')
             ]
         })
     ]
