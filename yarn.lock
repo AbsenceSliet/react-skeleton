@@ -4151,6 +4151,13 @@ react-awesome-skeleton@^0.0.15:
   resolved "https://registry.yarnpkg.com/react-awesome-skeleton/-/react-awesome-skeleton-0.0.15.tgz#84e7259259767a07ab94c63e3b7ff7c58aa2f543"
   integrity sha512-lnmmSrbbDTLTJ/JBDb7u0KUa5QoNIULMqK7+zO6nUNOyG+FPNlAACPghuJQbVKQcdrxg5osKrddbQChGtI8w5g==
 
+react-awesome-skeleton@^0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/react-awesome-skeleton/-/react-awesome-skeleton-0.0.26.tgz#5f8916173edfc8b2604ac5fe44e8fcf973b295ea"
+  integrity sha512-CdV4hILttvga8lSY5KBm/X0zNc7h8ClrLWrhA6kbWaR6SjZsP/Z40Vr6LP1SpmWFjTiT9oggGCfoXBcYV0E7XA==
+  dependencies:
+    react-awesome-skeleton "^0.0.15"
+
 react-is@^16.8.1:
   version "16.11.0"
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.11.0.tgz#b85dfecd48ad1ce469ff558a882ca8e8313928fa"

@@ -1,1 +1,2 @@
-export {default as Skeleton } from './component/skeleton';
+import Skeleton from "./component/skeleton"
+export default Skeleton
