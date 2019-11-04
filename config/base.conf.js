@@ -56,11 +56,14 @@ module.exports = {
 			{
                 test: /\.(css|scss)$/,
                 use:[
+                    // {
+                    //     loader: MiniCssExtractPlugin.loader,
+                    //     options: {
+                    //       hmr: process.env.NODE_ENV === 'development',
+                    //     },
+                    // },
                     {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                          hmr: process.env.NODE_ENV === 'development',
-                        },
+                        loader:require.resolve('style-loader')
                     },
                     {
                         loader: require.resolve('css-loader'),
@@ -87,12 +90,12 @@ module.exports = {
 		]
 	},
     plugins:[
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: devMode ? '[name].css' : '[name].[hash].css',
-            chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-        }),
+        // new MiniCssExtractPlugin({
+        //     // Options similar to the same options in webpackOptions.output
+        //     // both options are optional
+        //     filename: devMode ? '[name].css' : '[name].[hash].css',
+        //     chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+        // }),
         new CleanWebpackPlugin({
             dry:false,
             cleanStaleWebpackAssets:true,
