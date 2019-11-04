@@ -5,6 +5,8 @@ src/
 node_modules/
 config/
 build/
+lib/
+example/
 .babelrc
 .gitignore
 tsconfig.json
