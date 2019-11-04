@@ -1,9 +1,9 @@
 {
   "name": "react-awesome-skeleton",
-  "version": "0.0.27",
+  "version": "0.0.29",
   "description": " better loading effect",
   "main": "dist/index.js",
-  "typings": "dist/src/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config config/build.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,8 +27,7 @@
   },
   "homepage": "https://github.com/AbsenceSliet/react-skeleton/blob/master/README.md",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",

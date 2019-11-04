@@ -1,7 +1,7 @@
 const path =require('path')
 const webpack =  require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
+// const autoprefixer = require('autoprefixer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const resolve = dir => path.join(__dirname, '.', dir)
 const pathSrc = resolve('../src/')
@@ -75,11 +75,13 @@ module.exports = {
                             // https://github.com/facebookincubator/create-react-app/issues/2677
                             ident: 'postcss',
                             plugins: () => [
-                                require('postcss-flexbugs-fixes')
+                                require('postcss-flexbugs-fixes'),
+                                require('autoprefixer')(), //CSS浏览器兼容
                             ],
                         },
                     },
-                    { loader: require.resolve('sass-loader') }
+                    { loader: require.resolve('sass-loader') },
+                    
                 ]
             }
 		]
