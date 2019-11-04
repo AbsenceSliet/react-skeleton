@@ -57,7 +57,7 @@ function getParagraphBasicProps(hasAvatar: boolean, hasTitle: boolean): Skeleton
     }
     renderSkeleton = () => {
         const {
-            prefixCls = 'homework-skeleton',
+            prefixCls = 'skeleton',
             active,
             title,
             paragraph,

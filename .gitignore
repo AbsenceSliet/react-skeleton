@@ -1,7 +1,9 @@
 node_modules
 node_modules/
-package-lock.js
+package-lock.json
 yar-lock.js
 .DS_Store
 dist/
+yarn-error.log
+lib/
 yarn-error.log

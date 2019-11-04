@@ -1,28 +1,32 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist",
-    "target": "es6",
-    "lib": [ "dom","es2017"],
-    "sourceMap": true,
-    // "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "importHelpers": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "declaration": true,
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "example/*"
-  ]
+  	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./lib",
+		"target": "es6",
+		"lib": [ "dom","es2017"],
+		"sourceMap": true,
+		// "allowJs": true,
+		"jsx": "react",
+		"moduleResolution": "node",
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"importHelpers": true,
+		"strictNullChecks": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"noUnusedLocals": true,
+		"declaration": true,
+		"paths":{
+			"@component/*":["*","./src/component/*"]
+		}
+  	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		// "example/*",
+		"config/*"
+	]
 }
