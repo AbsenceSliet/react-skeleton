@@ -2,7 +2,6 @@ const path  = require('path')
 const merge = require('webpack-merge')
 const baseConfig  =  require('./webpack.base')
 const HtmlWebpackPlugin  =  require('html-webpack-plugin')
-
 const devConfig  =  {
     mode: 'development',
     devtool: 'inline-source-map',
@@ -41,7 +40,8 @@ const devConfig  =  {
     plugins:[
         new HtmlWebpackPlugin({
             title:'Compoent Example',
-            template:path.join(__dirname,'../public/index.html')
+            template:path.join(__dirname,'../public/index.html'),
+            favicon:'../public/react-awesome-skeleton.ico'
         })
     ]
 
