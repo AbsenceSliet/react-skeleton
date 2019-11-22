@@ -41,7 +41,7 @@ const devConfig  =  {
         new HtmlWebpackPlugin({
             title:'Compoent Example',
             template:path.join(__dirname,'../public/index.html'),
-            favicon:'../public/react-awesome-skeleton.ico'
+            // favicon:'../public/react-awesome-skeleton.ico'
         })
     ]
 

@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-skeleton",
-  "version": "0.0.38",
+  "version": "0.0.40",
   "description": " better loading effect",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -12,7 +12,6 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-    "publish": "npm run build && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

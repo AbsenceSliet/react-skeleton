@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "react-awesome-skeleton",
-    "version": "0.0.36",
+    "version": "0.0.39",
     "description": " better loading effect",
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
